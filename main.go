@@ -10,8 +10,8 @@ import (
 	"gorm.io/gorm"
 )
 
-func main () {
- 
+func main() {
+
 	dsn := "root:@tcp(127.0.0.1:3306)/crowdfunding?charset=utf8mb4&parseTime=True&loc=Local"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 
@@ -29,8 +29,7 @@ func main () {
 	api := router.Group("/api/v1")
 
 	api.POST("/users", userHandler.ResgisterUser)
+	api.POST("/sessions", userHandler.Login)
 	router.Run()
 
-	}
-
-	
+}

@@ -12,7 +12,6 @@ type Campaign struct {
 	ShortDescription string
 	Description      string
 	Perks            string
-	BeckerCount      int
 	GoalAmount       int
 	CurrentAmount    int
 	Slug             string
